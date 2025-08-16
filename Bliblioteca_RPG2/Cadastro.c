@@ -93,7 +93,7 @@ int main(){
             scanf("%i", &valor);
             if(valor == 3){
                 system("clear");
-                media(id_identificador, personagens);
+                media(level, personagens);
                  printf("Pressione ENTER para retornar ao menu principal: ");
                 // Necessario para o ENTER funcionar
                 getchar();
@@ -102,7 +102,7 @@ int main(){
             }
             else if(valor == 1){
                 system("clear");
-                maior(id_identificador,nome,personagens);
+                maior(level,nome,personagens);
                  printf("Pressione ENTER para retornar ao menu principal: ");
                 // Necessario para o ENTER funcionar
                 getchar();
@@ -111,7 +111,7 @@ int main(){
             }
             else if(valor == 2){
                 system("clear");
-                menor(id_identificador,nome,personagens);
+                menor(level,nome,personagens);
                  printf("Pressione ENTER para retornar ao menu principal: ");
                 // Necessario para o ENTER funcionar
                 getchar();

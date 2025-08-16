@@ -1,6 +1,6 @@
 id_personagem(): Lista o personagem a partir do id_identificador
 
-levelParametros(media(), maior(), menor()):  Retorna o menor level, o maior e a media de todos.
+media(), maior(), menor()):  Retorna o menor level, o maior e a media de todos.
 
 personagem(criar(), listar(), editar(), remover());
 	id_identificador

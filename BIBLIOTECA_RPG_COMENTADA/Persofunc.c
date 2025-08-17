@@ -1,0 +1,202 @@
+#include <stdio.h> //biblioteca padrão
+#include "Prototipos.h" //inclui o arquivo que esta nossos protótipos
+
+// Layout completo
+void layout_completo(){
+    printf("=========================================\n");
+    printf("=            MENU DE PESONAGEMS         =\n");
+    printf("=========================================\n");
+    printf("[1] Criar personagem                    =\n");
+    printf("[2] Deletar personagem                  =\n");
+    printf("[3] Listar pesonagens                   =\n");
+    printf("[4] Atualizar pesonagem                 =\n");
+    printf("[5] Exibir personagem                   =\n");
+    printf("[6] Status personagens                  =\n");
+    printf("[0] Encerrar sessao                     =\n");
+    printf("=========================================\n");
+}
+
+//layout de level
+void layout_level(){ 
+    printf("=========================================\n");
+    printf("=        CRIADOR DE PERSONAGENS         =\n");
+    printf("=========================================\n");
+    printf("[1] Obter maior level                   =\n");
+    printf("[2] Obter menor level                   =\n");
+    printf("[3] Obter media dos leveis              =\n");
+    printf("=========================================\n");
+}
+
+// Layout parcial para criar personagem
+void layout_parcial(){
+    printf("=========================================\n");
+    printf("=        CRIADOR DE PERSONAGENS         =\n");
+    printf("=========================================\n");
+}
+
+//layout parcial para edição de personagem
+void layout_parcial_edicao(){
+    printf("=========================================\n");
+    printf("=         EDIÇÃO DE PERSONAGENS         =\n");
+    printf("=========================================\n");
+}
+
+//layout parcial para lista de personagem
+void layout_parcial_listar(){
+    printf("=========================================\n");
+    printf("=          LISTA DE PERSONAGENS         =\n");
+    printf("=========================================\n");
+}
+
+//função para criar personagens com parâmetros passados
+void criar(int personagens, int id_identificador[], char nomes[][MAX_STR], char classe[][MAX_STR], int level[], char raca[][MAX_STR], char genero[][MAX_STR]) {
+
+
+    int valor = personagens; //valor recebe a quantidade de personagens
+    int n = 1; //contador para exibir os personagens
+    for(int i = 0; i < valor; i++){ //loop para criar os personagens
+        printf("\n");
+        printf("             PERSONAGEM  %i            \n", n);
+        printf("\n");
+        printf("Nome do personagem: ");
+        scanf("%s", nomes[i]); //armazena o nome digitado no array
+        printf("\nQual id identificador do personagem: ");
+        scanf("%i", &id_identificador[i]); //armazena o id_identificador(posição) digitado no array
+        printf("\nQual a classe do personagem: ");
+        scanf("%s", classe[i]); //armazena a classe digitada no array
+        printf("\nQual o level do personagem: ");
+        scanf("%i", &level[i]); //armazena o level digitado no array
+        printf("\nQual a raça do personagem: ");
+        scanf("%s", raca[i]); //armazena a raça digitada no array
+        printf("\nQual o gênero do personagem: ");
+        scanf("%s", genero[i]); //armazena o gênero digitado no array
+        printf("\n");
+        n++; //incrementa o contador de personagens
+        printf("--------------------------------------\n");
+    }
+    
+}
+
+//função para listar todos os personagens
+void listar(int personagens, int id_identificador[], char nomes[][MAX_STR], char classe[][MAX_STR], int level[], char raca[][MAX_STR], char genero[][MAX_STR]){
+    int valor = personagens; //quantidade de personagens
+    for(int i = 0; i < valor; i++){ //loop para listar cada personagem
+        int *id = &id_identificador[i]; //ponteiro para ID(endereço) do personagem
+        if(id_identificador[i] != 0){ //verificando se o personagem existe
+            printf("\n");
+            printf("Nome do personagem: %s\n", nomes[i]);
+            printf("Qual id identificador do personagem: %i\n", id_identificador[i]);
+            printf("Qual a classe do personagem: %s\n", classe[i]);
+            printf("Qual o level do personagem: %i\n", level[i]);
+            printf("Qual a raça do personagem: %s\n", raca[i]);
+            printf("Qual o gênero do personagem: %s\n", genero[i]);
+            printf("id do personagem: %p", (void *)id); //vai ter como saida o endereço da memória que é o id do usuário
+            printf("\n");
+        }
+    }   
+}
+
+//função para atualizar um personagem específicp
+void atualizar(int vbn,int id_identificador[], char nomes[][MAX_STR], char classe[][MAX_STR], int level[], char raca[][MAX_STR], char genero[][MAX_STR]){
+
+    int valor = vbn - 1; //ajusta o indice para o personagem, vbn é a posição do personagem
+    printf("\n---------Dados Antigos---------\n"); //vai mostrar os dados antigos daquele personagem que não foi atualizado ainda
+
+    printf("\nNome do personagem:-------------- %s\n",nomes[valor]);
+    printf("Identificador do personagem:----- %i\n", &id_identificador[valor]);
+    printf("Classe do personagem:------------ %s\n", classe[valor]);
+    printf("Level do personagem:------------- %i\n", &level[valor]);
+    printf("Raça do personagem:-------------- %s\n", raca[valor]);
+    printf("Gênero do personagem:------------ %s\n", genero[valor]);
+
+    printf("\n----------Dados Novos----------\n"); //mostra os dados novos do personagem, aquele que  o usuário vai digitar
+
+    printf("\nNome do personagem: ");
+    scanf("%s", nomes[valor]);
+    printf("Qual id identificador do personagem: ");
+    scanf("%i", &id_identificador[valor]);
+    printf("Qual a classe do personagem: ");
+    scanf("%s", classe[valor]);
+    printf("Qual o level do personagem: ");
+    scanf("%i", &level[valor]);
+    printf("Qual a raça do personagem: ");
+    scanf("%s", raca[valor]);
+    printf("Qual o gênero do personagem: ");
+    scanf("%s", genero[valor]);
+    printf("\n");
+}
+
+//função para deletar um personagem específico
+void deletar(int vbn,int id_identificador[], char nomes[][MAX_STR], char classe[][MAX_STR], int level[], char raca[][MAX_STR], char genero[][MAX_STR]){
+    printf("\n");
+    int valor = vbn - 1; //ajusta o índice
+    for(int i = 0; i <= valor; i++){ //loop para apagar o personagem
+        nomes[i][0] = '\0';          // string vazia
+        id_identificador[i] = 0;     // zera o ID
+        classe[i][0] = '\0';         // string vazia
+        level[i] = 0;                // zera o level
+        raca[i][0] = '\0';           // string vazia
+        genero[i][0] = '\0';         // string vazia
+        printf("Personagem Deletado.\n");
+        printf("\n");
+    }
+}
+
+//função que mostra os dados específicos de um personagem
+void listar_id(int vbn, int id_identificador[], char nomes[][MAX_STR], char classe[][MAX_STR], int level[], char raca[][MAX_STR], char genero[][MAX_STR]){ //chama a funcão listar_id com os parâmetros
+    vbn = vbn - 1; //ajusta o índice
+    int *id = &id_identificador[vbn]; //ponteiro para o ID(endereço)
+        if(id_identificador[vbn] != 0){ //verifica se o personagem existe
+            printf("=========================================\n");
+            printf("       LISTA DE PERSONAGEM %s            \n",nomes[vbn] );
+            printf("=========================================\n");
+            printf("\n");
+            printf("Nome do personagem: %s\n", nomes[vbn]);
+            printf("Qual id identificador do personagem: %i\n", id_identificador[vbn]);
+            printf("Qual a classe do personagem: %s\n", classe[vbn]);
+            printf("Qual o level do personagem: %i\n", level[vbn]);
+            printf("Qual a raça do personagem: %s\n", raca[vbn]);
+            printf("id do personagem:: %p \n", (void *)id); //vai ter como saida o endereço da memória que é o id do usuário
+        }
+}
+
+void maior(int level[], char nomes[][MAX_STR], int personagens){ //chama a função maior com os parâmetros
+    int maior = 0; //atribui 0 ao maior nível
+    int pos = 0;
+    for(int i = 0; i < personagens; i++){
+        if(level[i] > maior){ //verificando o maior level 
+            maior = level[i]; //atribuindo o level ao maior se a condição for verdaddeira
+            pos = i; //pos recebendo o valor de i, que é o id_identificador do player
+        }
+    }
+    printf("A maior level é %i do personagem %s .\n",maior,nomes[pos]); //saida do maior level
+    printf("\n");
+}
+
+void menor(int level[], char nomes[][MAX_STR], int personagens){ //chama a função menor com os parâmetros
+    int menor = 0; //atribui 0 ao menor nível
+    int pos = 0; 
+    menor = level[0];
+    for(int i = 0; i < personagens; i++){
+        if(level[i] < menor){ //verificando o menor level 
+            menor = level[i]; //atribuindo o level ao menor se a condição for verdaddeira
+            pos = i; //pos recebendo o valor de i, que é o id_identificador do player
+        }
+    }
+    printf("A menor level é %i do personagem %s .\n",menor,nomes[pos]); //saida do menor level
+    printf("\n");
+}
+
+
+void media(int level[], int personagens){ //chama a função media com os parâmetros
+    float media = 0;
+    for(int i = 0; i < personagens; i++){ 
+        media += level[i]; //media recebendo as somas de level
+    }
+    media = media/personagens; //calculando a media
+    printf("A media dos personagens foi %.2f .\n", media); //saida de media 
+    printf("\n");
+
+}
+
+

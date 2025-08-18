@@ -54,5 +54,3 @@ gcc Persomain.c Persofunc.c -o Tes
 <img width="1920" height="1080" alt="Exemplo_Execução8" src="https://github.com/user-attachments/assets/8048f143-7ed2-48cc-892f-fcf033a6a4fe" />
 
 
-  94c6-41b7-ac4d-e4fc5691ef75" />
-

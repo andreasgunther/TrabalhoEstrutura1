@@ -25,7 +25,7 @@ Estrutura dos Arquivos:
 
 # Como Compilar e Executar
 
-No terminal, vá até a pasta que está os arquivos salvos, use ls para verificar os caminhos que está passando.
+No terminal, vá até a pasta que está os arquivos salvos, use o comando ls para verificar os caminhos que está passando.
 
 Quando encontrar os arquivos na pasta certa, passe para o próximo passo.
 

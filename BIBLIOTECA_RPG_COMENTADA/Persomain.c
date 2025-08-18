@@ -139,7 +139,7 @@ int main(){ //função main(principal) do nosso sistema
             }
         }
 
-        else{ //caso o usuário digite um valor inválido no menu principal
+        else if(fun != 0){ //caso o usuário digite um valor inválido no menu principal
             system("clear");
             printf("Valor Invalido.\n");
             printf("Pressione ENTER para retornar ao menu principal: ");

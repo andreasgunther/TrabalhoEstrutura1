@@ -25,7 +25,9 @@ Estrutura dos Arquivos:
 
 # Como Compilar e Executar
 
-No terminal, dentro da pasta do projeto:
+No terminal, vá até a pasta que está os arquivos salvos.
+Use ls para verificar os caminhos que está passando.
+Quando encontrar os arquivos na pasta certa, passe para o próximo passo.
 
 # Compilar os três arquivos juntos
 gcc Persomain.c Persofunc.c -o person

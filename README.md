@@ -30,7 +30,7 @@ No terminal, vá até a pasta que está os arquivos salvos, use o comando ls par
 Quando encontrar os arquivos na pasta certa, passe para o próximo passo.
 
 # Compilar os três arquivos juntos
-gcc Persomain.c Persofunc.c -o person
+gcc Persomain.c Persofunc.c -o Tes
 
 # Executar o programa
-./person
+./Tes

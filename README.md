@@ -36,7 +36,7 @@ gcc Persomain.c Persofunc.c -o Tes
 ./Tes
 
 # PRINTS COM O CÓDIGO EM EXECUÇÃO
-# Menu com todas as funcionalidades do nosso sistema
+#Menu com todas as funcionalidades do nosso sistema
 <img width="1920" height="1080" alt="Exemplo_execução1" src="https://github.com/user-attachments/assets/17f0320b-c720-4677-9b5d-88a8f583ac55" />
 # Depois de entrar no menu criação e criar 2 personagens
 <img width="1920" height="1080" alt="Exemplo_execução2" src="https://github.com/user-attachments/assets/719a54d6-2809-45f5-b08d-37d06382e8f5" />

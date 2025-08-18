@@ -34,3 +34,17 @@ gcc Persomain.c Persofunc.c -o Tes
 
 # Executar o programa
 ./Tes
+
+#PRINTS COM O CÓDIGO EM EXECUÇÃO
+<img width="1920" height="1080" alt="Exemplo_execução1" src="https://github.com/user-attachments/assets/17f0320b-c720-4677-9b5d-88a8f583ac55" />
+<img width="1920" height="1080" alt="Exemplo_execução2" src="https://github.com/user-attachments/assets/719a54d6-2809-45f5-b08d-37d06382e8f5" />
+<img width="1920" height="1080" alt="Exemplo_Execução3" src="https://github.com/user-attachments/assets/c6465157-fe21-4fb5-864d-5245b544bf6f" />
+<img width="1920" height="1080" alt="Exemplo_Execução4" src="https://github.com/user-attachments/assets/20b969b9-a6d0-4b08-a44e-f2fe919415de" />
+<img width="1920" height="1080" alt="Exemplo_Execução5" src="https://github.com/user-attachments/assets/9ae87bab-4667-4797-a880-886088d8cec4" />
+<img width="1920" height="1080" alt="Exemplo_Execução6" src="https://github.com/user-attachments/assets/3ef5193e-6532-4eaa-ae50-6bedd4d891f2" />
+<img width="1920" height="1080" alt="Exemplo_Execução7" src="https://github.com/user-attachments/assets/26dd8bb4-1e1a-4dbe-a344-3ea65de2c526" />
+<img width="1920" height="1080" alt="Exemplo_Execução8" src="https://github.com/user-attachments/assets/8048f143-7ed2-48cc-892f-fcf033a6a4fe" />
+
+
+  94c6-41b7-ac4d-e4fc5691ef75" />
+

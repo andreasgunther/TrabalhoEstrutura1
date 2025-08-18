@@ -23,7 +23,7 @@ Estrutura dos Arquivos:
   - Exclusão  
   - Estatísticas (maior, menor e média de níveis)
 
-*Como Compilar e Executar
+# Como Compilar e Executar
 
 No terminal, dentro da pasta do projeto:
 

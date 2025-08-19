@@ -7,7 +7,7 @@ int main(){ //função main(principal) do nosso sistema
     int personagens;
     int qrt = 0;
     do{
-        printf("\nSão permitidos somente 10 playes.\n");
+        printf("\nSão permitidos somente 10 players.\n");
         printf("Qual é a quantidade personagens que iram patircipar dessa aventura: ");
         scanf("%i", &personagens);
         if(personagens > 10 || personagens < 1){

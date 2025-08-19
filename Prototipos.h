@@ -4,8 +4,6 @@
 
 #define MAX_STR 100 //define 100 como valor max para a string 
 
-// Prototipos
-
 //funções que exibem os layouts 
 void layout_completo(); //função do layout completo do menu de personagens
 

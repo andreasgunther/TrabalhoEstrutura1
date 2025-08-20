@@ -48,7 +48,3 @@ gcc Persomain.c Persofunc.c -o Tes
 <img width="1920" height="1080" alt="Exemplo_Execução5" src="https://github.com/user-attachments/assets/9ae87bab-4667-4797-a880-886088d8cec4" />
 #Tela das estatísticas de level
 <img width="1920" height="1080" alt="Captura de tela de 2025-08-19 21-57-43" src="https://github.com/user-attachments/assets/5a634469-4829-4bfb-adab-a8f9370855f2" />
-
-<img width="1920" height="1080" alt="Exemplo_Execução8" src="https://github.com/user-attachments/assets/8048f143-7ed2-48cc-892f-fcf033a6a4fe" />
-
-

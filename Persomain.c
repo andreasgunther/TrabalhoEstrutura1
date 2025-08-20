@@ -6,9 +6,9 @@ int main(){ //função main(principal) do nosso sistema
 
     int personagens;
     int qrt = 0;
-
-    qtd_jogadores(&personagens, &qrt);
-
+    
+    qtd_jogadores(&personagens, &qrt); //define o valor das variáveis, passando seus endereços para a função
+        
     //criação dos arrays para guardar os dados de cada personagem
     int id_identificador[personagens]; //guarda o id_identificador(posição) de cada personagem
     char nome[personagens][MAX_STR]; //guarda o nome de cada personagem
@@ -86,48 +86,16 @@ int main(){ //função main(principal) do nosso sistema
 
         else if(fun == 6){ //se for 6 ele entra no menu para visualizar o maior, menor e a media de level
             system("clear");
-            int valor; //variável para controle do sistema de level
+            int maior, menor, media, pos;
             layout_level(); //mostra o menu com opções de maior, menor e média de level
-            printf("Digite: ");
-            scanf("%i", &valor); //vai ler o número que o usuário digitou
-            if(valor == 3){ //se valor for 3 ele entra no menu para média de level
-                system("clear");
-                media(level, personagens); //chama a função media
-                 printf("Pressione ENTER para retornar ao menu principal: ");
-                // Necessario para o ENTER funcionar
-                getchar();
-                getchar();
-                printf("\n");
-            }
-            else if(valor == 1){ //se valor for 1 ele entra no menu de maior level
-                system("clear");
-                maior(level,nome,personagens); //chama a função maior
-                 printf("Pressione ENTER para retornar ao menu principal: ");
-                // Necessario para o ENTER funcionar
-                getchar();
-                getchar();
-                printf("\n");
-            }
-            else if(valor == 2){ //se valor for 2 ele entra no menu de menor level
-                system("clear");
-                menor(level,nome,personagens);
-                 printf("Pressione ENTER para retornar ao menu principal: ");
-                // Necessario para o ENTER funcionar
-                getchar();
+            estatisticas(level, nome, personagens, &maior, &menor, &media);
+            printf("Pressione ENTER para retornar ao menu principal: ");
+            getchar();
+            getchar();
+            printf("\n");
 
-                getchar();
-                printf("\n");
-            }
-            else{ //caso o usuário digite um valor inválido
-                system("clear");
-                printf("Valor Invalido");
-                printf("Pressione ENTER para retornar ao menu principal: ");
-                // Necessario para o ENTER funcionar
-                getchar();
-                getchar();
-                printf("\n");
-            }
         }
+
 
         else if(fun != 0){ //caso o usuário digite um valor inválido no menu principal
             system("clear");

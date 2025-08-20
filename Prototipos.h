@@ -16,7 +16,6 @@ void layout_parcial_listar(); //função que mostra o layout para a listagem dos
 void layout_level(); //função que mostra o menu para as situações que envolvem o level (maior, menor e media)
 
 void qtd_jogadores(int *personagens, int *qrt); //função que define a quantidade de jogadores
-
 //funções de CRUD(create, read, update e delete)
 
 //criação de personagens
@@ -39,15 +38,6 @@ void deletar(int valor, int id_identificador[], char nomes[][MAX_STR], char clas
 void listar_id(int vbn, int id_identificador[], char nomes[][MAX_STR], char classe[][MAX_STR], int level[], char raca[][MAX_STR], char genero[][MAX_STR]);
 
 //funções para o cálculo do maior, menor e média dos levels
-
-//função para cáculo do maior level, exibindo ele
-void maior(int level[], char nomes[][MAX_STR], int personagens);
-
-//função para cáculo do menor level, exibindo ele
-void menor(int level[], char nomes[][MAX_STR], int personagens);
-
-//função para cáculo da média de levels, exibindo ele
-void media(int level[], int personagens);
-
+void estatisticas(int level[], char nomes[][MAX_STR], int personagens,int *maior,int *menor, int *media);
 
 #endif //fim 

@@ -23,10 +23,6 @@ void layout_level(){
     printf("=========================================\n");
     printf("=        CRIADOR DE PERSONAGENS         =\n");
     printf("=========================================\n");
-    printf("[1] Obter maior level                   =\n");
-    printf("[2] Obter menor level                   =\n");
-    printf("[3] Obter media dos leveis              =\n");
-    printf("=========================================\n");
 }
 
 // Layout parcial para criar personagem
@@ -191,53 +187,33 @@ void listar_id(int vbn, int id_identificador[], char nomes[][MAX_STR], char clas
             printf("id do personagem:: %p \n", (void *)id); //vai ter como saida o endereço da memória que é o id do usuário
         }
 }
-
-void maior(int level[], char nomes[][MAX_STR], int personagens){ //chama a função maior com os parâmetros
-    int maior = 0; //atribui 0 ao maior nível
-    int pos = 0;
-    for(int i = 0; i < personagens; i++){
-        if(level[i] > maior){ //verificando o maior level 
-            maior = level[i]; //atribuindo o level ao maior se a condição for verdaddeira
-            pos = i; //pos recebendo o valor de i, que é o id_identificador do player
-        }
-    }
-    printf("A maior level é %i do personagem %s .\n",maior,nomes[pos]); //saida do maior level
-    printf("\n");
-}
-
-void menor(int level[], char nomes[][MAX_STR], int personagens){ //chama a função menor com os parâmetros
-    int menor = 0; //atribui 0 ao menor nível
-    int pos = 0; 
-    
-    for(int i = 0; i < personagens; i++){
+void estatisticas(int level[],char nomes[][MAX_STR], int personagens,int *maior,int *menor, int *media){
+    int soma = 0;
+    int inicial = 0;
+    char pos_maior = 0, pos_menor = 0;
+    for (int i = 0; i < personagens; i++){
         if(level[i] != 0){
-            menor = level[i];
-            break;
-        }
-    }
-
-    for(int i = 0; i < personagens; i++){
-        if(level[i] != 0){
-            if(level[i] < menor){ //verificando o menor level 
-                menor = level[i]; //atribuindo o level ao menor se a condição for verdaddeira
-                pos = i; //pos recebendo o valor de i, que é o id_identificador do player
+            if(inicial == 0){ // primeiro valor válido
+                *maior = level[i];
+                *menor = level[i];
+                pos_maior = i;
+                pos_menor = i;
+                inicial = 1;
+            }
+            if(level[i] > *maior){ //verificando o maior level 
+                *maior = level[i]; //atribuindo o level ao maior se a condição for verdadeira
+                pos_maior = i;
+            }
+            if(level[i] < *menor){ //verificando o menor level
+                *menor = level[i]; //atribuindo o level ao menor se a condição for verdadeira
+                pos_menor = i;
             }
         }
+        soma += level[i]; //adicionando as somas dos levels
     }
-    printf("A menor level é %i do personagem %s .\n",menor,nomes[pos]); //saida do menor level
-    printf("\n");
+    *media = soma / personagens; // continua sendo int, como você quer
+    printf("O maior level é %i do personagem %s.\n", *maior, nomes[pos_maior]);
+    printf("O menor level é %i do personagem %s.\n", *menor, nomes [pos_menor]);
+    printf("A média dos levels é: %d\n", *media);
 }
-
-
-void media(int level[], int personagens){ //chama a função media com os parâmetros
-    int media = 0;
-    for(int i = 0; i < personagens; i++){ 
-        media += level[i]; //media recebendo as somas de level
-    }
-    media = media/personagens; //calculando a media
-    printf("A media dos personagens foi %i .\n", media); //saida de media 
-    printf("\n");
-
-}
-
-
+      

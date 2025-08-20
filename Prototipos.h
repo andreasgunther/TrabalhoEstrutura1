@@ -16,6 +16,7 @@ void layout_parcial_listar(); //função que mostra o layout para a listagem dos
 void layout_level(); //função que mostra o menu para as situações que envolvem o level (maior, menor e media)
 
 void qtd_jogadores(int *personagens, int *qrt); //função que define a quantidade de jogadores
+
 //funções de CRUD(create, read, update e delete)
 
 //criação de personagens

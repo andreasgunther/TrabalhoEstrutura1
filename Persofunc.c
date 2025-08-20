@@ -50,6 +50,20 @@ void layout_parcial_listar(){
     printf("=========================================\n");
 }
 
+//função para determinar a quantia de jogadores
+void qtd_jogadores(int *personagens, int *qrt){
+    do{
+        printf("\nSão permitidos somente 10 players.\n");
+        printf("Qual é a quantidade personagens que iram patircipar dessa aventura: ");
+        scanf("%i", personagens);
+        if(*personagens > 10 || *personagens < 1){
+            printf("\nNumero não permitido de pesonagems, Tente novamente.\n");
+        }else{
+            *qrt = 1;
+        }
+     } while(*qrt != 1);
+}
+
 //função para criar personagens com parâmetros passados
 void criar(int personagens, int id_identificador[], char nomes[][MAX_STR], char classe[][MAX_STR], int level[], char raca[][MAX_STR], char genero[][MAX_STR]) {
 

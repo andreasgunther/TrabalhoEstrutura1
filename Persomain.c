@@ -6,16 +6,8 @@ int main(){ //função main(principal) do nosso sistema
 
     int personagens;
     int qrt = 0;
-    do{
-        printf("\nSão permitidos somente 10 players.\n");
-        printf("Qual é a quantidade personagens que iram patircipar dessa aventura: ");
-        scanf("%i", &personagens);
-        if(personagens > 10 || personagens < 1){
-            printf("\nNumero não permitido de pesonagems, Tente novamente.\n");
-        }else{
-            qrt = 1;
-        }
-     } while(qrt != 1);
+
+    qtd_jogadores(&personagens, &qrt);
 
     //criação dos arrays para guardar os dados de cada personagem
     int id_identificador[personagens]; //guarda o id_identificador(posição) de cada personagem

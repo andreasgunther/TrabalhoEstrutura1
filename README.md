@@ -44,7 +44,5 @@ gcc Persomain.c Persofunc.c -o Tes
 <img width="1920" height="1080" alt="Exemplo_Execução3" src="https://github.com/user-attachments/assets/c6465157-fe21-4fb5-864d-5245b544bf6f" />
 #Tela de quando for atualizar do personagem, aparecendo os dados antigos e os novos
 <img width="1920" height="1080" alt="Exemplo_Execução4" src="https://github.com/user-attachments/assets/20b969b9-a6d0-4b08-a44e-f2fe919415de" />
-#Tela para pegar as estatísticas de level
-<img width="1920" height="1080" alt="Exemplo_Execução5" src="https://github.com/user-attachments/assets/9ae87bab-4667-4797-a880-886088d8cec4" />
 #Tela das estatísticas de level
 <img width="1920" height="1080" alt="Captura de tela de 2025-08-19 21-57-43" src="https://github.com/user-attachments/assets/5a634469-4829-4bfb-adab-a8f9370855f2" />
